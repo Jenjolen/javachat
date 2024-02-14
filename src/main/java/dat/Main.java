@@ -12,7 +12,7 @@ public class Main
         Server server = new Server(9090, executorService);
         executorService.submit(server, "Server");
         System.out.println("Starting ChatClient");
-        Client client = new Client("127.0.0.1", 9090, executorService);
+        Client client = new Client("127.0.0.1", 9090, executorService); // 127.0.0.1 er altid ens egen lokale computer
         executorService.submit(client, "Client");
     }
 }
